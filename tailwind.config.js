@@ -12,7 +12,9 @@ module.exports = {
     extend: {
 
       fontFamily: {
-        gothic: "Dela Gothic One"
+        gothic: "Dela Gothic One",
+        marksquad: "Mark Squad",
+        ruberoid: "Ruberoid",
       },
 
       textStrokeWidth: {
