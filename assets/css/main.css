@@ -7,3 +7,18 @@
     width: 100%;
     margin: 0 auto;
 }
+
+@font-face {
+    font-family: "Mark Squad";
+    src: url("assets/fonts/Mark-Squad.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Ruberoid";
+    src: url("assets/fonts/Ruberoid-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
