@@ -18,7 +18,7 @@ module.exports = {
       },
 
       textStrokeWidth: {
-        DEFAULT: '1px',
+        DEFAULT: '0.1px',
         2: '2px',
         4: '4px',
       },
@@ -26,6 +26,9 @@ module.exports = {
         DEFAULT: '#000',
         white: '#fff',
         black: '#000',
+      },
+      colors: {
+        neonpink: '#F3236E'
       },
     },
   },
