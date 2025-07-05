@@ -3,7 +3,10 @@
 </script>
 
 <template>
-  <h1>GrafRide</h1>
+  <div class="container py-4">
+    <MainBanner/>
+  </div>
+
 </template>
 
 <style scoped>
