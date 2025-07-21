@@ -15,10 +15,12 @@ module.exports = {
         gothic: "Dela Gothic One",
         marksquad: "Mark Squad",
         ruberoid: "Ruberoid",
+        kobar: "KobarMoyes"
       },
 
       textStrokeWidth: {
         DEFAULT: '0.1px',
+        1: '1px',
         2: '2px',
         4: '4px',
       },
@@ -28,7 +30,8 @@ module.exports = {
         black: '#000',
       },
       colors: {
-        neonpink: '#F3236E'
+        neonpink: '#F3236E',
+        dark: '#171318'
       },
     },
   },

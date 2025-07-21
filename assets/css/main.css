@@ -22,3 +22,10 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "KobarMoyes";
+    src: url("assets/fonts/KobarMoyes.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
