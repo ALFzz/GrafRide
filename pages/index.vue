@@ -3,8 +3,9 @@
 </script>
 
 <template>
-  <div class="container py-4">
+  <div class="container py-4 px-10">
     <MainBanner/>
+    <AboutUsSection/>
   </div>
 
 </template>

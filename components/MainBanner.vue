@@ -3,9 +3,9 @@
 </script>
 
 <template>
-  <div class="relative flex flex-row max-lg:px-10 max-[910px]:flex-col py-8">
+  <div class="relative flex flex-row max-[910px]:flex-col py-8">
     <div class="flex flex-col">
-      <div class="absolute left-60 top-8 max-[415px]:top-[420px] max-sm:top-[370px] max-sm:left-10 max-[910px]:top-[420px] max-[910px]:left-0 z-10 flex self-end flex-col gap-2.5">
+      <div class="absolute left-60 top-8 max-[415px]:top-[420px] max-sm:top-[370px] max-sm:left-0 max-[910px]:top-[420px] max-[910px]:left-0 z-10 flex self-end flex-col gap-2.5">
         <span class="block h-0.5 w-52 max-sm:w-32 bg-gradient-to-r from-white via-white to-transparent"></span>
         <span class="block h-0.5 ml-14 w-52 max-sm:w-32 bg-gradient-to-r from-white via-white to-transparent"></span>
         <span class="block h-0.5 ml-28 w-52 max-sm:w-32 bg-gradient-to-r from-white via-white to-transparent"></span>
