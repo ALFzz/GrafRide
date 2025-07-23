@@ -3,9 +3,10 @@
 </script>
 
 <template>
-  <div class="container py-4 px-10">
+  <div class="container py-4 max-xl:px-10">
     <MainBanner/>
     <AboutUsSection/>
+    <AdvantagesSection/>
   </div>
 
 </template>
