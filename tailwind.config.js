@@ -31,7 +31,8 @@ module.exports = {
       },
       colors: {
         neonpink: '#F3236E',
-        dark: '#171318'
+        dark: '#171318',
+        gre: '#514953'
       },
     },
   },

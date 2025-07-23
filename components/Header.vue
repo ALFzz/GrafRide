@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 
 const isMenuOpen = ref(false)
 </script>
 
 <template>
   <header class="container mx-auto px-4 py-4 flex justify-between items-center font-ruberoid font-bold text-white relative">
-    <Logo />
+    <Logo :for-ui="true" />
 
     <button
         class="lg:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
