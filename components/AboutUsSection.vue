@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col lg:flex-row gap-10 lg:gap-40 mt-16 lg:mt-32 px-4 lg:px-0">
+  <div class="flex flex-col lg:flex-row gap-10 lg:gap-40 my-32 lg:mt-32 px-4 lg:px-0">
     <div class="w-full lg:w-1/2 flex flex-col">
       <UITitle title="about" sub-title="О нас" />
       <p class="font-ruberoid font-bold text-base lg:text-lg">
