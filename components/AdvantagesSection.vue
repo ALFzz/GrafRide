@@ -1,6 +1,6 @@
 <script setup lang="ts">
 
-import AdvantagesItem from "~/components/AdvantagesItem.vue";
+import AdvantagesItem from "~/components/AdvantageItem.vue";
 </script>
 
 <template>
