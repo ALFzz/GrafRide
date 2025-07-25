@@ -6,7 +6,9 @@ const isMenuOpen = ref(false)
 
 <template>
   <header class="container mx-auto px-4 py-4 flex justify-between items-center font-ruberoid font-bold text-white relative">
-    <Logo :for-ui="true" />
+    <NuxtLink to="/">
+      <Logo :for-ui="true" />
+    </NuxtLink>
 
     <button
         class="lg:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"

@@ -7,6 +7,7 @@
     <MainBanner/>
     <AboutUsSection/>
     <AdvantagesSection/>
+    <ServicesSection/>
   </div>
 
 </template>

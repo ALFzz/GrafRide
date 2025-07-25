@@ -15,7 +15,7 @@ defineProps({
     'hover:scale-105 active:scale-95 hover:shadow-lg z-20 relative'
   ]"
   >
-    Перейти к услугам
+    <slot></slot>
   </button>
 
 </template>
