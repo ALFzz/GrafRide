@@ -82,6 +82,11 @@ const products: ServiceProduct[] = [
           :price="product.price"
       />
     </div>
+    <div class="flex flex-row justify-between gap-12 items-center mt-10">
+      <div class="bg-gre h-0.5 w-1/2"></div>
+      <UIButton class="px-14 py-2 text-nowrap " :is-fill="false">Показать больше</UIButton>
+      <div class="bg-gre h-0.5 w-1/2"></div>
+    </div>
   </div>
 
 
