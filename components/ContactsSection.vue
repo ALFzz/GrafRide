@@ -35,29 +35,26 @@ const checked = ref(false)
         <ContactsInput placeholder="Задайте интересующий вопрос" />
 
         <!-- Чекбокс -->
-        <div class="flex">
+        <div class="flex flex-row gap-5">
           <label class="flex items-start gap-3 cursor-pointer select-none text-white">
             <input type="checkbox" v-model="checked" class="hidden peer" />
-            <div class="mt-1">
               <Icon
                   v-if="checked"
                   name="ri:checkbox-circle-fill"
                   class="text-neonpink transition w-6 h-6"
               />
               <div v-else class="w-6 h-6 rounded-full border-2 border-neonpink" />
-            </div>
-
-            <p class="text-sm sm:text-base font-medium">
-              Я согласен(а) с
-              <a href="#" class="text-neonpink underline hover:text-neonpink transition">
-                политикой конфиденциальности
-              </a>
-              и
-              <a href="#" class="text-neonpink underline hover:text-neonpink transition">
-                обработкой персональных данных
-              </a>
-            </p>
           </label>
+          <p class="text-sm sm:text-base font-medium">
+            Я согласен(а) с
+            <a href="#" class="text-neonpink underline hover:text-neonpink transition">
+              политикой конфиденциальности
+            </a>
+            и
+            <a href="#" class="text-neonpink underline hover:text-neonpink transition">
+              обработкой персональных данных
+            </a>
+          </p>
         </div>
 
         <UIButton class="w-full sm:w-1/2 self-center py-3 mt-5" :is-fill="false">
