@@ -70,7 +70,7 @@ const products: ServiceProduct[] = [
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col my-32">
     <UITitle title="services" sub-title="Услуги"/>
     <div class="flex flex-row justify-center items-center flex-wrap gap-7">
       <ServiceItem

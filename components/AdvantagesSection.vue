@@ -4,7 +4,7 @@ import AdvantagesItem from "~/components/AdvantageItem.vue";
 </script>
 
 <template>
-  <div class="flex flex-col my-40">
+  <div class="flex flex-col my-32">
     <UITitle title="advantages" sub-title="Преимущества"/>
     <div class="flex flex-wrap flex-row justify-center items-center gap-7 max-xl:gap-20">
       <AdvantagesItem

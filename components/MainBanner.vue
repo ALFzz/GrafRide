@@ -12,7 +12,7 @@
         <span class="block h-0.5 ml-44 w-52 max-sm:w-32 bg-gradient-to-r from-white via-white to-transparent"></span>
       </div>
       <h1 class="font-gothic mt-10 text-[70px] max-sm:text-[50px] leading-none text-transparent max-sm:text-wrap text-nowrap text-stroke-1 text-stroke-color-white">Прокачай <br> свою тачку</h1>
-      <img class=" mt-5 self-end max-[910px]:self-start w-[400px]" src="/images/pump.png" alt="pump">
+      <img class=" mt-5 self-end max-[910px]:self-start w-[400px]" src="public/images/pump.png" alt="pump">
       <NuxtLink class="self-end max-[910px]:self-start mt-10" to="/services">
         <UIButton :is-fill="true" class="py-3 px-10">Перейти к услугам</UIButton>
       </NuxtLink>
@@ -31,7 +31,7 @@
          max-lg:-mb-0 self-end
          max-sm:w-72 max-sm:h-20
          max-sm:left-1/2 max-sm:right-auto max-sm:translate-x-[-50%]"
-        src="/images/savage.png"
+        src="public/images/savage.png"
         alt="savage"
     />  </div>
 
