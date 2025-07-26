@@ -9,6 +9,7 @@
     <AdvantagesSection/>
     <ServicesSection/>
     <ReviewsSection/>
+    <ContactsSection/>
   </div>
 
 </template>

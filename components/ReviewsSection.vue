@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col">
+  <div class="flex flex-col my-32">
     <UITitle title="reviews" sub-title="Отзывы" />
     <div class="flex flex-row gap-10">
       <div class="flex flex-col w-1/2">
