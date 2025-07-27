@@ -16,5 +16,5 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ['@nuxt/fonts', '@nuxt/icon'],
+  modules:  ['@nuxt/fonts', '@nuxt/icon', 'motion-v/nuxt'],
 })

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="flex flex-col min-h-screen text-white bg-dark">
+  <div class="flex flex-col max-w-full overflow-x-hidden min-h-screen text-white bg-dark">
   <Header/>
     <slot></slot>
   <Footer/>
