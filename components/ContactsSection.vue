@@ -18,18 +18,20 @@ const checked = ref(false)
         </div>
 
         <div class="relative mt-10">
+          <div class="absolute bottom-0 w-32 h-32 bg-white rounded-lg blur-3xl opacity-50 "/>
+
           <img class="w-full rounded-l-3xl" src="/images/contact_1.png" alt="contact" />
           <div class="absolute inset-0 bg-gradient-to-r from-[#171318]/0 via-transparent to-[#171318]" />
-          <h1
-              class="absolute -bottom-5 right-5 text-[36px] sm:text-[60px] lg:text-[90px] font-kobar text-transparent text-stroke-color-white text-stroke-1"
-          >
-            Disobedience
-          </h1>
+          <img
+              src="/public/images/Disobedience.png" alt="dis"
+              class="absolute max-lg:left-1/2 max-lg:-translate-x-1/2 -bottom-10  -right-20 font-kobar text-transparent text-stroke-color-white text-stroke-1"
+          />
         </div>
       </div>
 
       <!-- Правая колонка -->
-      <div class="flex flex-col w-full lg:w-1/2 gap-5">
+      <div class="flex relative flex-col w-full lg:w-1/2 gap-5">
+        <div class="absolute top-0 right-0 w-40 h-40 bg-neonpink rounded-lg blur-3xl opacity-60 "/>
         <ContactsInput placeholder="Введите Ваше имя" />
         <ContactsInput placeholder="8 (ххх) ххх-хх-хх" />
         <ContactsInput placeholder="Задайте интересующий вопрос" />
@@ -60,6 +62,15 @@ const checked = ref(false)
         <UIButton class="w-full sm:w-1/2 self-center py-3 mt-5" :is-fill="false">
           Связаться
         </UIButton>
+        <div class="absolute -bottom-20  top-8 max-[415px]:top-[420px] max-sm:top-[370px] max-sm:left-0 max-[910px]:top-[420px] max-[910px]:left-0 z-10 flex self-end flex-col gap-2.5">
+          <span class="block h-0.5 ml-44 w-52 max-sm:w-32 bg-gradient-to-l from-white via-white to-transparent"></span>
+          <span class="block h-0.5 ml-28 w-52 max-sm:w-32 bg-gradient-to-l from-white via-white to-transparent"></span>
+          <span class="block h-0.5 ml-14 w-52 max-sm:w-32 bg-gradient-to-l from-white via-white to-transparent"></span>
+          <span class="block h-0.5 w-52 max-sm:w-32 bg-gradient-to-l from-white via-white to-transparent"></span>
+
+
+
+        </div>
       </div>
     </div>
   </div>

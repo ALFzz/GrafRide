@@ -11,6 +11,7 @@
         <span class="block h-0.5 ml-28 w-52 max-sm:w-32 bg-gradient-to-r from-white via-white to-transparent"></span>
         <span class="block h-0.5 ml-44 w-52 max-sm:w-32 bg-gradient-to-r from-white via-white to-transparent"></span>
       </div>
+      <div class="absolute top-1/3 w-20 h-20 bg-white rounded-lg blur-3xl opacity-80 "/>
       <h1 class="font-gothic mt-10 text-[70px] max-sm:text-[50px] leading-none text-transparent max-sm:text-wrap text-nowrap text-stroke-1 text-stroke-color-white">Прокачай <br> свою тачку</h1>
       <img class=" mt-5 self-end max-[910px]:self-start w-[400px]" src="public/images/pump.png" alt="pump">
       <NuxtLink class="self-end max-[910px]:self-start mt-10" to="/services">
@@ -33,7 +34,8 @@
          max-sm:left-1/2 max-sm:right-auto max-sm:translate-x-[-50%]"
         src="public/images/savage.png"
         alt="savage"
-    />  </div>
+    />
+  </div>
 
 
 </template>

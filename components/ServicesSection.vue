@@ -72,8 +72,11 @@ const products: ServiceProduct[] = [
 <template>
   <div class="flex flex-col my-32">
     <UITitle title="services" sub-title="Услуги"/>
-    <div class="flex flex-row justify-center items-center flex-wrap gap-7">
+    <div class="flex relative flex-row justify-center items-center flex-wrap gap-7">
+      <div class="absolute top-0 right-32 w-80 h-80 bg-neonpink rounded-lg blur-3xl opacity-60 "/>
+      <div class="absolute -bottom-20 max-sm:left-0  left-52 w-52 h-52 bg-neonpink rounded-lg blur-3xl opacity-60 "/>
       <ServiceItem
+          class="z-20"
           v-for="(product, index) in products"
           :key="index"
           :image="product.image"
@@ -82,7 +85,7 @@ const products: ServiceProduct[] = [
           :price="product.price"
       />
     </div>
-    <div class="flex flex-row justify-between gap-12 items-center mt-10">
+    <div class="flex flex-row justify-center max-sm:justify-between max-[460px]:gap-0 gap-12 items-center mt-10">
       <div class="bg-gre h-0.5 w-1/2"></div>
       <UIButton class="px-14 py-2 text-nowrap " :is-fill="false">Показать больше</UIButton>
       <div class="bg-gre h-0.5 w-1/2"></div>
