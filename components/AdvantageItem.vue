@@ -61,8 +61,5 @@ defineProps({
 </template>
 
 <style scoped>
-/* Дополнительные стили для плавности */
-.motion-div {
-  will-change: transform, opacity;
-}
+
 </style>
