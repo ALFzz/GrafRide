@@ -28,7 +28,7 @@ defineProps({
     </svg>
     <h2 :class="[
         'font-gothic self-end    text-transparent    text-stroke-color-white',
-        forUi ? 'text-[40px] ml-9  -mt-12 text-stroke-DEFAULT' : 'text-[80px] text-stroke-2 ml-20 -mt-24'
+        forUi ? 'text-[40px] ml-9  -mt-12 ' : 'text-[80px] ml-20 -mt-24',
         ]">Ride</h2>
   </div>
 

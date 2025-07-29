@@ -12,7 +12,6 @@
           :whileInView="{ opacity: 1, x: 0 }"
           :transition="{ duration: 0.6 }"
       >
-        <!-- Анимированное свечение -->
         <Motion
             class="absolute top-0 w-24 h-24 bg-white rounded-lg blur-3xl opacity-80"
             :initial="{ scale: 0.8, opacity: 0 }"
@@ -20,7 +19,6 @@
             :transition="{ duration: 0.8, delay: 0.2 }"
         />
 
-        <!-- Анимированный заголовок -->
         <Motion
             class="font-gothic text-transparent text-stroke-1 text-stroke-color-white text-[40px] leading-tight"
             :initial="{ y: 20, opacity: 0 }"
@@ -30,7 +28,6 @@
           Ваш опыт, <br> наши достижения
         </Motion>
 
-        <!-- Анимированный текст -->
         <Motion
             class="font-ruberoid font-bold text-[13px] mt-4"
             :initial="{ y: 15, opacity: 0 }"
@@ -41,21 +38,17 @@
           <span class="text-neonpink">создавая уникальные и неповторимые творения</span>.
         </Motion>
 
-        <!-- Анимированная галерея -->
         <div class="relative flex flex-col gap-5 mt-16">
-          <!-- Декоративный элемент -->
           <Motion
-              class="absolute max-[1355px]:hidden bottom-0 w-[100px] h-[360px] -left-28"
+              class="absolute max-[1355px]:hidden bottom-0 -left-28"
               :initial="{ x: -50, opacity: 0 }"
               :whileInView="{ x: 0, opacity: 1 }"
               :transition="{ duration: 0.7, delay: 0.6 }"
           >
-            <img src="/public/images/Exclusive.png" alt="Exclusive">
+            <nuxt-img class="w-[100px] h-[360px]" loading="lazy" src="/images/Exclusive.png" alt="Exclusive"/>
           </Motion>
 
-          <!-- Контейнер для изображений с градиентом -->
           <div class="relative">
-            <!-- Градиент (теперь анимируется вместе с изображениями) -->
             <Motion
                 class="absolute inset-0 bg-gradient-to-r from-[#171318]/0 via-transparent to-[#171318]"
                 :initial="{ opacity: 0 }"
@@ -63,13 +56,12 @@
                 :transition="{ duration: 1.2, delay: 0.7 }"
             />
 
-            <!-- Изображения карусели -->
             <Motion
                 :initial="{ y: 30, opacity: 0 }"
                 :whileInView="{ y: 0, opacity: 1 }"
                 :transition="{ duration: 0.7, delay: 0.7 }"
             >
-              <img src="/public/images/carousel_1.png" alt="carousel_1">
+              <nuxt-img class="w-full h-full" loading="lazy" src="/images/carousel_1.png" alt="carousel_1"/>
             </Motion>
 
             <Motion
@@ -77,7 +69,7 @@
                 :whileInView="{ y: 10, opacity: 1 }"
                 :transition="{ duration: 0.7, delay: 0.8 }"
             >
-              <img src="/public/images/carousel_2.png" alt="carousel_2">
+              <nuxt-img class="w-full h-full" loading="lazy" src="/images/carousel_2.png" alt="carousel_2"/>
             </Motion>
 
             <Motion
@@ -85,7 +77,7 @@
                 :whileInView="{ y: 20, opacity: 1 }"
                 :transition="{ duration: 0.7, delay: 0.9 }"
             >
-              <img src="/public/images/carousel_3.png" alt="carousel_3">
+              <nuxt-img class="w-full h-full" loading="lazy" src="/images/carousel_3.png" alt="carousel_3"/>
             </Motion>
           </div>
         </div>

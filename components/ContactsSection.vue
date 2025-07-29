@@ -53,12 +53,12 @@ const lines = [
           />
 
           <Motion
-              class="w-full rounded-l-3xl"
+              class=" rounded-l-3xl"
               :initial="{ scale: 0.95, opacity: 0 }"
               :whileInView="{ scale: 1, opacity: 1 }"
               :transition="{ duration: 0.7, delay: 0.6 }"
           >
-            <img src="/images/contact_1.png" alt="contact" />
+            <nuxt-img class="w-full" loading="lazy" src="/images/contact_1.png" alt="contact" />
           </Motion>
 
           <Motion
@@ -69,12 +69,12 @@ const lines = [
           />
 
           <Motion
-              class="absolute max-lg:left-1/2 max-lg:-translate-x-1/2 -bottom-10 -right-20 font-kobar text-transparent text-stroke-color-white text-stroke-1"
+              class="absolute -bottom-10 -right-20 max-lg:left-1/2 max-lg:right-auto max-lg:transform max-lg:-translate-x-1/2"
               :initial="{ y: 30, opacity: 0 }"
               :whileInView="{ y: 0, opacity: 1 }"
               :transition="{ type: 'spring', stiffness: 300, damping: 10, delay: 0.8 }"
           >
-            <img src="/public/images/Disobedience.png" alt="dis" />
+            <img class="max-lg:mx-auto" src="/public/images/Disobedience.png" alt="dis" />
           </Motion>
         </Motion>
       </Motion>

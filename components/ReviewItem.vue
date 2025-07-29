@@ -18,7 +18,6 @@ defineProps({
 
 <template>
   <div class="relative flex flex-col w-full">
-    <!-- Анимированная внешняя рамка -->
     <Motion
         class="border-2 border-neonpink rounded-[35px] h-[220px] sm:h-[193px] w-full"
         :initial="{ opacity: 0, scale: 0.95 }"
@@ -26,14 +25,12 @@ defineProps({
         :transition="{ duration: 0.5 }"
     />
 
-    <!-- Анимированный внутренний блок -->
     <Motion
         class="absolute top-2 left-1 sm:top-4 sm:left-3 w-full h-[220px] sm:h-[193px] bg-gre border-2 border-gre rounded-[35px] px-6 sm:px-10 py-4 sm:py-5 font-ruberoid font-bold text-sm text-white"
         :initial="{ y: 20, opacity: 0 }"
         :whileInView="{ y: 0, opacity: 1 }"
         :transition="{ duration: 0.6, delay: 0.1 }"
     >
-      <!-- Анимация информации о пользователе -->
       <Motion
           class="flex flex-col sm:flex-row justify-between items-start sm:items-center sm:gap-0"
           :initial="{ x: -10, opacity: 0 }"
@@ -45,7 +42,6 @@ defineProps({
           {{ car }}
         </p>
 
-        <!-- Анимация звезд рейтинга -->
         <Motion
             class="flex flex-row"
             :initial="{ scale: 0.5, opacity: 0 }"
@@ -61,7 +57,6 @@ defineProps({
         </Motion>
       </Motion>
 
-      <!-- Анимация текста отзыва -->
       <Motion
           class="mt-4 sm:mt-5 text-xs sm:text-sm"
           :initial="{ y: 10, opacity: 0 }"

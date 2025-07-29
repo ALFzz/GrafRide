@@ -36,7 +36,7 @@
           :viewport="{ once: true }"
           :transition="{ type: 'spring', stiffness: 100, damping: 10, delay: 0.6 }"
       >
-        <Logo :for-ui="false" />
+        <Logo class="text-stroke-2"/>
       </Motion>
 
       <Motion

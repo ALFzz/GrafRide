@@ -7,7 +7,7 @@ const isMenuOpen = ref(false)
 <template>
   <header class="container mx-auto px-4 py-4 flex justify-between items-center font-ruberoid font-bold text-white relative">
     <NuxtLink to="/">
-      <Logo :for-ui="true" />
+      <Logo :for-ui="true" class="text-stroke-DEFAULT" />
     </NuxtLink>
 
     <button
@@ -39,7 +39,7 @@ const isMenuOpen = ref(false)
     </nav>
 
     <div
-        class="absolute top-full left-0 w-full bg-neutral-900 text-white flex flex-col items-center gap-4 py-4 overflow-hidden transition-all duration-500 ease-in-out lg:hidden"
+        class="absolute z-20 top-full left-0 w-full bg-neutral-900 text-white flex flex-col items-center gap-4 py-4 overflow-hidden transition-all duration-500 ease-in-out lg:hidden"
         :class="isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'"
     >
       <NuxtLink to="/about_us" @click="isMenuOpen = false">О нас</NuxtLink>
