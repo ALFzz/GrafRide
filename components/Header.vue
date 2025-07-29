@@ -1,18 +1,15 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 
-const isMenuOpen = ref(false)
 </script>
 
 <template>
   <header class="container mx-auto px-4 py-4 flex justify-between items-center font-ruberoid font-bold text-white relative">
     <NuxtLink to="/">
-      <Logo :for-ui="true" />
+      <Logo :for-ui="true" class="text-stroke-DEFAULT" />
     </NuxtLink>
 
     <button
         class="lg:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
-        @click="isMenuOpen = !isMenuOpen"
     >
       <span class="block w-full h-0.5 bg-white"></span>
       <span class="block w-full h-0.5 bg-white"></span>
