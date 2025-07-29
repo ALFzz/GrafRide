@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "GrafRide",
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/Logo.svg' },
+      ]
     }
   },
   compatibilityDate: '2025-07-03',
