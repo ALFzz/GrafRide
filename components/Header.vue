@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 
+const isMenuOpen = ref(false)
 </script>
 
 <template>
@@ -10,6 +12,7 @@
 
     <button
         class="lg:hidden flex flex-col justify-between w-6 h-5 focus:outline-none"
+        @click="isMenuOpen = !isMenuOpen"
     >
       <span class="block w-full h-0.5 bg-white"></span>
       <span class="block w-full h-0.5 bg-white"></span>
@@ -36,7 +39,7 @@
     </nav>
 
     <div
-        class="absolute top-full left-0 w-full bg-neutral-900 text-white flex flex-col items-center gap-4 py-4 overflow-hidden transition-all duration-500 ease-in-out lg:hidden"
+        class="absolute z-20 top-full left-0 w-full bg-neutral-900 text-white flex flex-col items-center gap-4 py-4 overflow-hidden transition-all duration-500 ease-in-out lg:hidden"
         :class="isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'"
     >
       <NuxtLink to="/about_us" @click="isMenuOpen = false">О нас</NuxtLink>
