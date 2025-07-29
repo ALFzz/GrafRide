@@ -24,7 +24,7 @@ const lines = [
       >
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10">
           <Motion
-              v-for="(item, index) in [
+              v-for="(item) in [
               { title: 'Контактный номер', subTitle: '8 (499) 423-63-56' },
               { title: 'Адрес', subTitle: 'Москва, Костянский пер., 4' },
               { title: 'Электронная почта', subTitle: 'grafride@gmail.ru' },
@@ -93,7 +93,7 @@ const lines = [
         />
 
         <Motion
-            v-for="(placeholder, index) in [
+            v-for="(placeholder) in [
             'Введите Ваше имя',
             '8 (ххх) ххх-хх-хх',
             'Задайте интересующий вопрос'
