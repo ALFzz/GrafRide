@@ -53,12 +53,12 @@ const lines = [
           />
 
           <Motion
-              class="w-full rounded-l-3xl"
+              class=" rounded-l-3xl"
               :initial="{ scale: 0.95, opacity: 0 }"
               :whileInView="{ scale: 1, opacity: 1 }"
               :transition="{ duration: 0.7, delay: 0.6 }"
           >
-            <img src="/images/contact_1.png" alt="contact" />
+            <nuxt-img class="w-full" loading="lazy" src="/images/contact_1.png" alt="contact" />
           </Motion>
 
           <Motion

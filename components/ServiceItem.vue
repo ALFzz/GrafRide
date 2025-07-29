@@ -31,18 +31,18 @@ const formattedPrice = computed(() => {
       :whileInView="{ opacity: 1, y: 0 }"
       :transition="{ duration: 0.6 }"
   >
-    <!-- Анимация изображения -->
     <div class="relative">
       <Motion
           :initial="{ scale: 0.95, opacity: 0 }"
           :whileInView="{ scale: 1, opacity: 1 }"
           :transition="{ duration: 0.5, delay: 0.1 }"
       >
-        <img
+        <nuxt-img
+            loading="lazy"
             class="rounded-t-[35px] w-full h-auto"
             :src="`/images/${image}.png`"
             :alt="image"
-        >
+        />
       </Motion>
       <Motion
           class="absolute rounded-t-[35px] inset-0 bg-gradient-to-t from-gre via-transparent to-black/10"
