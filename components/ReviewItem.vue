@@ -1,19 +1,8 @@
 <script setup lang="ts">
 
-defineProps({
-  name: {
-    type: String,
-    required: true
-  },
-  car: {
-    type: String,
-    required: true
-  },
-  reviewText: {
-    type: String,
-    required: true
-  }
-})
+import type { IReview } from '@/types/review'
+
+defineProps<IReview>()
 </script>
 
 <template>
