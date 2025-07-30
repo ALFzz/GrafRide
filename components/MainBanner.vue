@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const lines = [
+
+interface LineConfig {
+  width: string
+  marginClass: string
+}
+
+const lines: LineConfig = [
   { width: 'w-52 max-sm:w-32', marginClass: 'ml-0' },
   { width: 'w-52 max-sm:w-32', marginClass: 'ml-14' },
   { width: 'w-52 max-sm:w-32', marginClass: 'ml-28' },
@@ -40,7 +46,7 @@ const lines = [
         :initial="{ opacity: 0, x: '-100%' }"
         :whileInView="{ opacity: 1, x: 0 }"
         :viewport="{ once: true, margin: '-50%' }"
-        :transition="{duration: 0.8, ease: [0.25, 0.1, 0.25, 1]}"
+        :transition="{duration: 1.2, ease: [0.25, 0.1, 0.25, 1]}"
         class="flex flex-col">
 
       <div class="absolute  w-20 h-20 bg-white rounded-lg blur-3xl opacity-80 "/>
@@ -55,7 +61,7 @@ const lines = [
         :initial="{ opacity: 0, x: '100%' }"
         :whileInView="{ opacity: 1, x: 0 }"
         :viewport="{ once: true, margin: '-50%' }"
-        :transition="{duration: 0.8, ease: [0.25, 0.1, 0.25, 1]}"
+        :transition="{duration: 1.2, ease: [0.25, 0.1, 0.25, 1]}"
         class="relative max-[910px]:mt-12 w-7/12 max-[910px]:w-full h-[340px] overflow-hidden rounded-tr-xl rounded-br-md">
       <nuxt-img
           loading="lazy"

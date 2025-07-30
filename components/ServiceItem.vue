@@ -1,23 +1,9 @@
 <script setup lang="ts">
 
-const props = defineProps({
-  image: {
-    type: String,
-    required: true
-  },
-  title: {
-    type: String,
-    required: true,
-  },
-  subtitle: {
-    type: String,
-    required: true,
-  },
-  price: {
-    type: Number,
-    required: true
-  }
-})
+import type {IProduct} from "~/types/product";
+
+const props = defineProps<IProduct>();
+
 
 const formattedPrice = computed(() => {
   return new Intl.NumberFormat('ru-RU').format(props.price)
