@@ -1,71 +1,52 @@
 <script setup lang="ts">
 
-class ServiceProduct {
-  id: number;
-  image: string;
-  title: string;
-  subtitle: string;
-  price: number;
+import type {IProduct} from "~/types/product";
 
-  constructor(
-      id: number,
-      image: string,
-      title: string,
-      subtitle: string,
-      price: number
-  ) {
-    this.id = id;
-    this.image = image;
-    this.title = title;
-    this.subtitle = subtitle;
-    this.price = price;
-  }
-}
+const products: IProduct[] = [
+  {
+    id: 1,
+    title: 'Оклейка виниловой пленкой',
+    subtitle: 'Полная без проемов / с проемами',
+    image: 'bmw',
+    price: 195000
+  },
+  {
+    id: 2,
+    title: 'Тюнинговые фары',
+    subtitle: 'Современные и стильные оптические решения для вашего автомобиля',
+    image: 'light',
+    price: 50000
+  },
+  {
+    id: 3,
+    title: 'Доводчики дверей',
+    subtitle: 'Установка доводчиков / замена / доработка',
+    image: 'closers',
+    price: 150000
+  },
+  {
+    id: 4,
+    title: 'Выдвижные пороги',
+    subtitle: 'Установка выдвижных порогов',
+    image: 'thresholds',
+    price: 210000
+  },
+  {
+    id: 5,
+    title: 'Аэродинамический тюнинг',
+    subtitle: 'Работа над формой для улучшения аэродинамических характеристик',
+    image: 'airdynamics',
+    price: 50000
+  },
+  {
+    id: 6,
+    title: 'Легкосплавные диски',
+    subtitle: 'Диски для улучшения управляемости и внешнего вида',
+    image: 'disks',
+    price: 30000
+  },
+]
 
-const products: ServiceProduct[] = [
-  new ServiceProduct(
-      1,
-      'bmw',
-      'Оклейка виниловой пленкой',
-      'Полная без проемов / с проемами',
-      195000
-  ),
-  new ServiceProduct(
-      2,
-      'light',
-      'Тюнинговые фары',
-      'Современные и стильные оптические решения для вашего автомобиля',
-      50000
-  ),
-  new ServiceProduct(
-      3,
-      'closers',
-      'Доводчики дверей',
-      'Установка доводчиков / замена / доработка',
-      150000
-  ),
-  new ServiceProduct(
-      4,
-      'thresholds',
-      'Выдвижные пороги',
-      'Установка выдвижных порогов',
-      210000
-  ),
-  new ServiceProduct(
-      5,
-      'airdynamics',
-      'Аэродинамический тюнинг',
-      'Работа над формой для улучшения аэродинамических характеристик',
-      50000
-  ),
-  new ServiceProduct(
-      6,
-      'disks',
-      'Легкосплавные диски',
-      'Диски для улучшения управляемости и внешнего вида',
-      30000
-  ),
-];
 
 </script>
 
@@ -79,6 +60,7 @@ const products: ServiceProduct[] = [
           class="z-20"
           v-for="(product, index) in products"
           :key="index"
+          :id="product.id"
           :image="product.image"
           :title="product.title"
           :subtitle="product.subtitle"
