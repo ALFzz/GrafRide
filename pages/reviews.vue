@@ -3,7 +3,9 @@
 </script>
 
 <template>
-  <h1>reviews</h1>
+  <div class="container py-4 flex-1 max-xl:px-10">
+    <h1>reviews</h1>
+  </div>
 </template>
 
 <style scoped>
