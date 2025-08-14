@@ -74,7 +74,7 @@ const lines = [
               :whileInView="{ y: 0, opacity: 1 }"
               :transition="{ type: 'spring', stiffness: 300, damping: 10, delay: 0.8 }"
           >
-            <img class="max-lg:mx-auto" src="/public/images/Disobedience.png" alt="dis" />
+            <nuxt-img class="max-lg:mx-auto max-lg:h-[60px] max-[400px]:h-[30px] max-[500px]:h-[40px] max-sm:h-[50px] w-[490px] h-[86px]" src="/images/Disobedience.png" alt="dis" loading="lazy" />
           </Motion>
         </Motion>
       </Motion>
