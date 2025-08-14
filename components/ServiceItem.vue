@@ -101,7 +101,7 @@ const textAnimation = (delay: number) => ({
 }
 
 .product-image {
-  @apply rounded-t-[35px] w-[360px] h-auto;
+  @apply rounded-t-[35px];
 }
 
 .image-overlay {
