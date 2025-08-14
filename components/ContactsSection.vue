@@ -116,6 +116,8 @@ const animations = {
           <Motion v-bind="animations.contactImage">
             <nuxt-img
                 class="w-full rounded-l-3xl"
+                width="943"
+                height="350"
                 loading="lazy"
                 src="/images/contact_1.png"
                 alt="contact"
@@ -132,7 +134,9 @@ const animations = {
               v-bind="animations.logoImage"
           >
             <nuxt-img
-                class="max-lg:mx-auto max-lg:h-[60px] max-[400px]:h-[30px] max-[500px]:h-[40px] max-sm:h-[50px] w-[490px] h-[86px]"
+                class="max-lg:mx-auto max-lg:h-[60px] max-[400px]:h-[30px] max-[500px]:h-[40px] max-sm:h-[50px]"
+                width="490"
+                height="86"
                 src="/images/Disobedience.png"
                 alt="dis"
                 loading="lazy"

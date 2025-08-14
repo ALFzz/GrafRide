@@ -68,7 +68,7 @@ const animations = {
         />
 
         <Motion class="text-block" v-bind="animations.title">
-          <h2 class="font-gothic text-transparent text-stroke-1 text-stroke-color-white text-[40px] leading-tight">
+          <h2 class="font-gothic text-transparent text-stroke-1 text-[40px] leading-tight">
             Ваш опыт, <br> наши достижения
           </h2>
         </Motion>
@@ -98,15 +98,15 @@ const animations = {
             <Motion class="carousel-overlay" :initial="{ opacity: 0 }" :whileInView="{ opacity: 1 }" :transition="{ duration: 1.2, delay: 0.7 }" />
 
             <Motion v-bind="animations.carousel(0.7, 0)">
-              <nuxt-img class="carousel-img" loading="lazy" src="/images/carousel_1.png" alt="carousel_1"/>
+              <nuxt-img width="562" height="176" class="carousel-img" loading="lazy" src="/images/carousel_1.png" alt="carousel_1"/>
             </Motion>
 
             <Motion v-bind="animations.carousel(0.8, 10)">
-              <nuxt-img class="carousel-img" loading="lazy" src="/images/carousel_2.png" alt="carousel_2"/>
+              <nuxt-img width="562" height="176" class="carousel-img" loading="lazy" src="/images/carousel_2.png" alt="carousel_2"/>
             </Motion>
 
             <Motion v-bind="animations.carousel(0.9, 20)">
-              <nuxt-img class="carousel-img" loading="lazy" src="/images/carousel_3.png" alt="carousel_3"/>
+              <nuxt-img  width="562" height="176" class="carousel-img" loading="lazy" src="/images/carousel_3.png" alt="carousel_3"/>
             </Motion>
           </div>
         </div>

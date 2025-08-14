@@ -20,4 +20,26 @@ export default defineNuxtConfig({
   },
 
   modules:  ['@nuxt/fonts', '@nuxt/icon', '@nuxt/image', 'motion-v/nuxt'],
+  fonts: {
+    families: [
+      {
+        name: 'Dela Gothic One',
+        provider: 'google',
+        weights: [400],
+        preload: true,
+      },
+      {
+        name: 'Ruberoid',
+        src: '/fonts/Ruberoid-Regular.woff2',
+        weights: [400],
+        preload: true,
+      },
+      {
+        name: 'Mark Squad',
+        src: '/fonts/Mark-Squad.woff2',
+        weights: [400],
+        preload: false,
+      },
+      ]
+  }
 })

@@ -27,7 +27,7 @@ const closeMenu = () => {
 <template>
   <header class="container mx-auto px-4 py-4 flex justify-between items-center font-ruberoid font-bold text-white relative">
     <NuxtLink to="/" aria-label="На главную">
-      <Logo :for-ui="true" class="text-stroke-DEFAULT" />
+      <Logo :for-ui="true" class="text-stroke" />
     </NuxtLink>
 
     <button

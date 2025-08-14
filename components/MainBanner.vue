@@ -49,11 +49,11 @@ const lines = [
       </h1>
       <nuxt-img
           loading="lazy"
-          class="mt-5 self-end max-[910px]:self-start w-[400px]"
+          class="mt-5 self-end max-[910px]:self-start"
           src="/images/pump.png"
           alt="Насос"
           width="400"
-          height="auto"
+          height="52"
       />
       <NuxtLink class="self-end max-[910px]:self-start mt-10" to="/services">
         <UIButton :is-fill="true" class="py-3 px-10">Перейти к услугам</UIButton>
@@ -81,7 +81,7 @@ const lines = [
 
     <nuxt-img
         loading="lazy"
-        class="absolute right-0 bottom-0 -mb-6 max-lg:-mb-0 self-end w-[385px] h-[115px] max-sm:w-72 max-sm:h-20 max-sm:left-1/2 max-sm:right-auto max-sm:translate-x-[-50%]"
+        class="absolute right-0 bottom-0 -mb-6 max-lg:-mb-0 self-end max-sm:w-72 max-sm:h-20 max-sm:left-1/2 max-sm:right-auto max-sm:translate-x-[-50%]"
         src="/images/savage.png"
         alt="Savage Motors"
         width="385"
