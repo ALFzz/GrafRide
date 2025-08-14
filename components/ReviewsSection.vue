@@ -22,116 +22,122 @@ const reviews: IReview[] = [
     reviewText: "GRAFRIDE не просто мастера тюнинга, они создают произведения искусства. Вся команда профессионалов, и каждый проект - это отражение их страсти к автомобилям.",
   }
 ]
+const animations = {
+  section: {
+    initial: { opacity: 0, x: -20 },
+    whileInView: { opacity: 1, x: 0 },
+    transition: { duration: 0.6 }
+  },
+  glow: {
+    initial: { scale: 0.8, opacity: 0 },
+    whileInView: { scale: 1, opacity: 0.8 },
+    transition: { duration: 0.8, delay: 0.2 }
+  },
+  title: {
+    initial: { y: 20, opacity: 0 },
+    whileInView: { y: 0, opacity: 1 },
+    transition: { duration: 0.5, delay: 0.3 }
+  },
+  subtitle: {
+    initial: { y: 15, opacity: 0 },
+    whileInView: { y: 0, opacity: 1 },
+    transition: { duration: 0.5, delay: 0.4 }
+  },
+  exclusiveImg: {
+    initial: { x: -50, opacity: 0 },
+    whileInView: { x: 0, opacity: 1 },
+    transition: { duration: 0.7, delay: 0.6 }
+  },
+  carousel: (delay: number, y: number) => ({
+    initial: { y: 30, opacity: 0 },
+    whileInView: { y, opacity: 1 },
+    transition: { duration: 0.7, delay }
+  })
+}
 </script>
 
 <template>
-  <div class="flex flex-col my-32">
+  <section class="my-32">
     <UITitle title="reviews" sub-title="Отзывы" />
-    <div class="flex relative flex-row max-lg:flex-col gap-10">
-      <Motion
-          class="flex flex-col w-1/2 max-lg:w-full relative"
-          :initial="{ opacity: 0, x: -20 }"
-          :whileInView="{ opacity: 1, x: 0 }"
-          :transition="{ duration: 0.6 }"
-      >
+
+    <div class="relative flex flex-col lg:flex-row gap-10">
+      <Motion class="relative w-full lg:w-1/2" v-bind="animations.section">
         <Motion
             class="absolute top-0 w-24 h-24 bg-white rounded-lg blur-3xl opacity-80"
-            :initial="{ scale: 0.8, opacity: 0 }"
-            :whileInView="{ scale: 1, opacity: 0.8 }"
-            :transition="{ duration: 0.8, delay: 0.2 }"
+            v-bind="animations.glow"
         />
 
-        <Motion
-            class="font-gothic text-transparent text-stroke-1 text-stroke-color-white text-[40px] leading-tight"
-            :initial="{ y: 20, opacity: 0 }"
-            :whileInView="{ y: 0, opacity: 1 }"
-            :transition="{ duration: 0.5, delay: 0.3 }"
-        >
-          Ваш опыт, <br> наши достижения
+        <Motion class="text-block" v-bind="animations.title">
+          <h2 class="font-gothic text-transparent text-stroke-1 text-stroke-color-white text-[40px] leading-tight">
+            Ваш опыт, <br> наши достижения
+          </h2>
         </Motion>
 
-        <Motion
-            class="font-ruberoid font-bold text-[13px] mt-4"
-            :initial="{ y: 15, opacity: 0 }"
-            :whileInView="{ y: 0, opacity: 1 }"
-            :transition="{ duration: 0.5, delay: 0.4 }"
-        >
-          Мы стремимся не просто удовлетворять ожидания клиентов, а превосходить их,
-          <span class="text-neonpink">создавая уникальные и неповторимые творения</span>.
+        <Motion class="mt-4" v-bind="animations.subtitle">
+          <p class="font-ruberoid font-bold text-[13px]">
+            Мы стремимся не просто удовлетворять ожидания клиентов, а превосходить их,
+            <span class="text-neonpink">создавая уникальные и неповторимые творения</span>.
+          </p>
         </Motion>
 
-        <div class="relative flex flex-col gap-5 mt-16">
+        <div class="relative mt-16">
           <Motion
               class="absolute max-[1355px]:hidden bottom-0 -left-28"
-              :initial="{ x: -50, opacity: 0 }"
-              :whileInView="{ x: 0, opacity: 1 }"
-              :transition="{ duration: 0.7, delay: 0.6 }"
+              v-bind="animations.exclusiveImg"
           >
-            <nuxt-img class="w-[100px] h-[360px]" loading="lazy" src="/images/Exclusive.png" alt="Exclusive"/>
+            <nuxt-img
+                width="100"
+                height="430"
+                loading="lazy"
+                src="/images/Exclusive.png"
+                alt="Exclusive"
+            />
           </Motion>
 
-          <div class="relative">
-            <Motion
-                class="absolute inset-0 bg-gradient-to-r from-[#171318]/0 via-transparent to-[#171318]"
-                :initial="{ opacity: 0 }"
-                :whileInView="{ opacity: 1 }"
-                :transition="{ duration: 1.2, delay: 0.7 }"
-            />
+          <div class="carousel-container">
+            <Motion class="carousel-overlay" :initial="{ opacity: 0 }" :whileInView="{ opacity: 1 }" :transition="{ duration: 1.2, delay: 0.7 }" />
 
-            <Motion
-                :initial="{ y: 30, opacity: 0 }"
-                :whileInView="{ y: 0, opacity: 1 }"
-                :transition="{ duration: 0.7, delay: 0.7 }"
-            >
-              <nuxt-img class="w-full h-full" loading="lazy" src="/images/carousel_1.png" alt="carousel_1"/>
+            <Motion v-bind="animations.carousel(0.7, 0)">
+              <nuxt-img class="carousel-img" loading="lazy" src="/images/carousel_1.png" alt="carousel_1"/>
             </Motion>
 
-            <Motion
-                :initial="{ y: 30, opacity: 0 }"
-                :whileInView="{ y: 10, opacity: 1 }"
-                :transition="{ duration: 0.7, delay: 0.8 }"
-            >
-              <nuxt-img class="w-full h-full" loading="lazy" src="/images/carousel_2.png" alt="carousel_2"/>
+            <Motion v-bind="animations.carousel(0.8, 10)">
+              <nuxt-img class="carousel-img" loading="lazy" src="/images/carousel_2.png" alt="carousel_2"/>
             </Motion>
 
-            <Motion
-                :initial="{ y: 30, opacity: 0 }"
-                :whileInView="{ y: 20, opacity: 1 }"
-                :transition="{ duration: 0.7, delay: 0.9 }"
-            >
-              <nuxt-img class="w-full h-full" loading="lazy" src="/images/carousel_3.png" alt="carousel_3"/>
+            <Motion v-bind="animations.carousel(0.9, 20)">
+              <nuxt-img class="carousel-img" loading="lazy" src="/images/carousel_3.png" alt="carousel_3"/>
             </Motion>
           </div>
         </div>
       </Motion>
 
-      <div class="flex relative w-1/2 max-lg:w-full flex-col gap-20">
-        <div class="absolute top-1/2 right-0 w-32 h-32 bg-neonpink rounded-lg blur-3xl  "/>
+      <div class="relative w-full lg:w-1/2 flex flex-col gap-20">
+        <div class="absolute top-1/2 right-0 w-32 h-32 bg-neonpink rounded-lg blur-3xl" />
         <ReviewItem
             v-for="review in reviews"
             :key="review.id"
-            :id="review.id"
-            :name="review.name"
-            :car="review.car"
-            :review-text="review.reviewText"
+            v-bind="review"
         />
       </div>
-
-
-
     </div>
-
-  </div>
+  </section>
 </template>
 
 <style scoped>
-img {
-  position: relative;
-  z-index: 1;
+.carousel-container {
+  @apply relative;
 }
 
-.bg-gradient-to-r {
-  z-index: 2;
-  transition: opacity 1.2s ease;
+.carousel-overlay {
+  @apply absolute inset-0 bg-gradient-to-r from-[#171318]/0 via-transparent to-[#171318] z-10;
+}
+
+.carousel-img {
+  @apply w-full h-full relative z-0;
+}
+
+.text-block {
+  @apply mb-4;
 }
 </style>
